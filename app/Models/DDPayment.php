@@ -17,7 +17,9 @@ class DDPayment implements PaymentInterface
 	public function charge($initial_amount) {
 		$final_amount = $initial_amount * (1 + 7/100);
 
-		return $final_amount;
+		$final_amount_format = number_format((float)$final_amount, 2, '.', '');
+
+		return $final_amount_format;
 	}
 }
 

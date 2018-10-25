@@ -17,7 +17,9 @@ class CCPayment implements PaymentInterface
 	public function charge($initial_amount) {
 		$final_amount = $initial_amount * (1 + 1/10);
 
-		return $final_amount;
+		$final_amount_format = number_format((float)$final_amount, 2, '.', '');
+
+		return $final_amount_format;
 	}
 }
 
