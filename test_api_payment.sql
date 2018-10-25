@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2018 at 02:57 PM
+-- Generation Time: Oct 25, 2018 at 04:08 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -30,7 +30,6 @@ USE `test_api_payment`;
 -- Table structure for table `charges`
 --
 
-DROP TABLE IF EXISTS `charges`;
 CREATE TABLE IF NOT EXISTS `charges` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `payment_id` int(11) NOT NULL,
@@ -44,15 +43,14 @@ CREATE TABLE IF NOT EXISTS `charges` (
 -- Table structure for table `payments`
 --
 
-DROP TABLE IF EXISTS `payments`;
 CREATE TABLE IF NOT EXISTS `payments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` enum('cc','dd') COLLATE utf8mb4_unicode_ci NOT NULL,
-  `iban` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `expiry` date NOT NULL,
-  `cc` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ccv` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `iban` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `expiry` date DEFAULT NULL,
+  `cc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ccv` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 COMMIT;

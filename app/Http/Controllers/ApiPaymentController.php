@@ -44,10 +44,10 @@ class ApiPaymentController extends Controller
 
 				$type = ''; // cc or dd
 
-				$iban = ''; // only for dd
-				$expiry = ''; // only for cc
-				$cc = ''; // only for cc
-				$ccv = ''; // only for cc
+				$iban = null; // only for dd
+				$expiry = null; // only for cc
+				$cc = null; // only for cc
+				$ccv = null; // only for cc
 
 				if (isset($data->type) && !empty($data->type)) {
 					$type = $data->type;
