@@ -1,25 +1,25 @@
-Implemented in Laravel.  
-Developed in localhost, with XAMPP.
-
-POST parameters have to be named "data" and their values - given as JSON strings.
-Responses are returned in a JSON format.
-
-
-**Endpoints**
-
-POST /public/api/payment
-GET /public/api/charge
-POST /public/api/charge
-GET /public/api/charge/{id}
-
-
-**Important files**
-
-/app/Http/Controllers/ApiPaymentController.php
-/app/Models/Interfaces/PaymentInterface.php
-/app/Models/CCPayment.php
-/app/Models/DDPayment.php
-/routes/api.php
-/config/database.php (database config)
-/.env (not commited here, but needed for database config and others)
-/test_api_payment.sql (database creation script)
+Implemented in Laravel.<br />
+Developed in localhost, with XAMPP.<br />
+<br />
+POST parameters have to be named "data" and their values - given as JSON strings.<br />
+Responses are returned in a JSON format.<br />
+<br />
+<br />
+**Endpoints**<br />
+<br />
+POST /public/api/payment<br />
+GET /public/api/charge<br />
+POST /public/api/charge<br />
+GET /public/api/charge/{id}<br />
+<br />
+<br />
+**Important files**<br />
+<br />
+/app/Http/Controllers/ApiPaymentController.php<br />
+/app/Models/Interfaces/PaymentInterface.php<br />
+/app/Models/CCPayment.php<br />
+/app/Models/DDPayment.php<br />
+/routes/api.php<br />
+/config/database.php (database config)<br />
+/.env (not commited here, but needed for database config and others)<br />
+/test_api_payment.sql (database creation script)<br />
