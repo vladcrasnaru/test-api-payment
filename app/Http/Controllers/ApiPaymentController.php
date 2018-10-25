@@ -151,7 +151,7 @@ class ApiPaymentController extends Controller
 
 		foreach ($charges as $charge) {
 			$new_charge = $charge;
-			unset($new_charge['id']);
+			unset($new_charge->id);
 			$response_data[] = $new_charge;
 		}
 
