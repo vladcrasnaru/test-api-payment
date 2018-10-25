@@ -253,7 +253,7 @@ class ApiPaymentController extends Controller
 	public function getChargeById($id) {
 		$db = DB::connection('mysql');
 
-		$response_data = [];
+		$response_data = null;
 		$response_code = 200;
 
 		$charges = $db->table('charges')->where('id', $id)->get();
